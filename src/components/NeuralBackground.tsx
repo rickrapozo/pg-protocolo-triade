@@ -23,8 +23,7 @@ export default function NeuralBackground() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d')!;
 
     let animId: number;
     let width = 0;
@@ -34,8 +33,6 @@ export default function NeuralBackground() {
 
     const NODE_COUNT = 28;
     const MAX_DIST = 150;
-    const NODE_COLOR = 'rgba(255, 215, 0,';
-    const PULSE_COLOR = 'rgba(255, 215, 0, 0.9)';
 
     function resize() {
       const parent = canvas!.parentElement;
