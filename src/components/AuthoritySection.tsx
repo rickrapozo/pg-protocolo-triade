@@ -1,3 +1,5 @@
+import NeuralBackgroundLight from './NeuralBackgroundLight';
+
 const AuthoritySection = () => {
   const experts = [
     {
@@ -20,14 +22,15 @@ const AuthoritySection = () => {
 
   return (
     <section
-      className="py-20 px-4 sm:px-6 border-t border-zinc-200"
+      className="relative overflow-hidden py-20 px-4 sm:px-6 border-t border-zinc-200"
       style={{
         backgroundColor: '#ffffff',
-        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23d4d4d8' fill-opacity='0.45'/%3E%3C/svg%3E")`,
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23d4d4d8' fill-opacity='0.35'/%3E%3C/svg%3E")`,
         backgroundRepeat: 'repeat',
       }}
     >
-      <div className="max-w-5xl mx-auto">
+      <NeuralBackgroundLight />
+      <div className="max-w-5xl mx-auto relative z-10">
 
         {/* Section Header */}
         <div className="text-center mb-16">
