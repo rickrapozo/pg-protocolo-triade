@@ -19,18 +19,25 @@ const AuthoritySection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 bg-zinc-950 border-t border-zinc-900 text-white">
+    <section
+      className="py-20 px-4 sm:px-6 border-t border-zinc-200"
+      style={{
+        backgroundColor: '#ffffff',
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23d4d4d8' fill-opacity='0.45'/%3E%3C/svg%3E")`,
+        backgroundRepeat: 'repeat',
+      }}
+    >
       <div className="max-w-5xl mx-auto">
 
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#FFD700' }}>
+          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#B8860B' }}>
             QUEM CRIOU O PROTOCOLO
           </p>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-5">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 tracking-tight mb-5">
             A ciência por trás do <span className="highlight">diagnóstico.</span>
           </h2>
-          <p className="text-zinc-400 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-zinc-500 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
             O Protocolo a Tríade não é autoajuda. É aplicação direta de neurobiologia e prática clínica avançada.
           </p>
         </div>
@@ -40,10 +47,10 @@ const AuthoritySection = () => {
           {experts.map((person, i) => (
             <div
               key={i}
-              className="group flex flex-col rounded-2xl overflow-hidden border border-zinc-800 hover:border-brand-green transition-all duration-300 bg-zinc-900 shadow-xl hover:shadow-[0_8px_30px_rgba(255,215,0,0.12)]"
+              className="group flex flex-col rounded-2xl overflow-hidden border border-zinc-200 hover:border-brand-green transition-all duration-300 bg-white shadow-lg hover:shadow-[0_8px_30px_rgba(184,134,11,0.15)]"
             >
               {/* Photo — full image visible, no crop */}
-              <div className="w-full bg-zinc-800 flex items-center justify-center">
+              <div className="w-full bg-zinc-100 flex items-center justify-center">
                 <img
                   src={person.image}
                   alt={`Foto de ${person.name}`}
@@ -53,17 +60,17 @@ const AuthoritySection = () => {
               </div>
 
               {/* Card body */}
-              <div className="p-6 border-t border-zinc-800">
+              <div className="p-6 border-t border-zinc-100">
                 {/* Role tag */}
                 <span
                   className="text-xs font-bold uppercase tracking-widest"
-                  style={{ color: '#FFD700' }}
+                  style={{ color: '#B8860B' }}
                 >
                   {person.role}
                 </span>
 
                 {/* Name */}
-                <h3 className="text-2xl font-extrabold text-white mt-1 mb-1">
+                <h3 className="text-2xl font-extrabold text-zinc-900 mt-1 mb-1">
                   {person.name}
                 </h3>
 
@@ -76,9 +83,9 @@ const AuthoritySection = () => {
                       key={j}
                       className="text-xs font-semibold px-3 py-1 rounded-full border"
                       style={{
-                        borderColor: 'rgba(255,215,0,0.3)',
-                        color: 'rgba(255,215,0,0.8)',
-                        backgroundColor: 'rgba(255,215,0,0.05)',
+                        borderColor: 'rgba(184,134,11,0.35)',
+                        color: '#92700a',
+                        backgroundColor: 'rgba(184,134,11,0.07)',
                       }}
                     >
                       {c}
@@ -87,7 +94,7 @@ const AuthoritySection = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-zinc-400 leading-relaxed text-sm">
+                <p className="text-zinc-500 leading-relaxed text-sm">
                   {person.description}
                 </p>
               </div>
@@ -99,13 +106,13 @@ const AuthoritySection = () => {
         <div
           className="mt-12 rounded-xl p-6 text-center border"
           style={{
-            borderColor: 'rgba(255,215,0,0.15)',
-            background: 'rgba(255,215,0,0.04)',
+            borderColor: 'rgba(184,134,11,0.2)',
+            background: 'rgba(184,134,11,0.06)',
           }}
         >
-          <p className="text-zinc-300 font-semibold">
+          <p className="text-zinc-700 font-semibold">
             Juntos, Ricardo e Carlos já atenderam mais de{' '}
-            <span style={{ color: '#FFD700' }} className="font-black">700 pacientes</span>{' '}
+            <span style={{ color: '#B8860B' }} className="font-black">700 pacientes</span>{' '}
             em processos clínicos de alto impacto.
           </p>
         </div>
